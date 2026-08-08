@@ -1,14 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python demo_masker.py)",
-      "Bash(python -c ':*)",
-      "Bash(python -m build --wheel --no-isolation)",
-      "Bash(python -m build --wheel)",
-      "Bash(python -m build --sdist)",
-      "Bash(python -c \"import zipfile; z=zipfile.ZipFile\\('dist/secrets_masker-1.0.0-py3-none-any.whl'\\); print\\('\\\\n'.join\\(z.namelist\\(\\)\\)\\)\")",
-      "Bash(python -m pytest tests/ -v)",
-      "Bash(python -m pytest tests/ -v --tb=short)"
+      "Bash(git -C /c/Users/ROG/Downloads/Secrets-masker log --oneline --all -- README.md)",
+      "Bash(git -C /c/Users/ROG/Downloads/Secrets-masker show 0061091:README.md)",
+      "Bash(git -C /c/Users/ROG/Downloads/Secrets-masker show e4af565:README.md)",
+      "Bash(git:*)",
+      "Bash(icacls \"C:\\\\\\\\Users\\\\\\\\ROG\\\\\\\\Downloads\\\\\\\\Secrets-masker\")",
+      "Bash(powershell:*)",
+      "Bash(cmd /c \"echo test > \\\\\"C:\\\\Users\\\\ROG\\\\Downloads\\\\Secrets-masker\\\\README.md\\\\\"\")",
+      "Bash(cmd:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)"
     ]
   }
 }
