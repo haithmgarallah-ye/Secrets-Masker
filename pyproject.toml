@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secrets-masker"
+version = "1.0.0"
+description = "Zero-dependency Python library that detects and redacts secrets from any text using regex patterns, keyword heuristics, and entropy analysis."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Haithm Garallah", email = "haithmgarallah@example.com" },
+]
+keywords = [
+    "secrets",
+    "masking",
+    "redaction",
+    "security",
+    "credentials",
+    "tokens",
+    "api-keys",
+    "logging",
+    "sanitization",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+    "Typing :: Typed",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/haithmgarallah-ye/Secrets-Masker"
+Repository = "https://github.com/haithmgarallah-ye/Secrets-Masker"
+"Bug Tracker" = "https://github.com/haithmgarallah-ye/Secrets-Masker/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["secretsmasker*"]
+
+[tool.setuptools.package-data]
+secretsmasker = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["secretsmasker"]

@@ -54,30 +54,35 @@ Each match is replaced with `[SECRETS]`, preserving surrounding context.
 
 ## Installation
 
-No package manager needed. Just copy the file:
-
 ```bash
-# Clone the repo
-git clone https://github.com/haithmgarallah-ye/Secrets-Masker.git
-
-# Or download the single file directly
-curl -O https://raw.githubusercontent.com/haithmgarallah-ye/Secrets-Masker/main/secrets_masker.py
+pip install secrets-masker
 ```
 
-Then place `secrets_masker.py` next to your script and import:
+Then import anywhere in your project:
 
 ```python
-from secrets_masker import mask_secrets
+from secretsmasker import mask_secrets
 ```
 
-> **Requirements:** Python 3.8+ · No third-party packages
+> **Requirements:** Python 3.8+ · No third-party packages · Zero setup
+
+<details>
+<summary>Install from source</summary>
+
+```bash
+git clone https://github.com/haithmgarallah-ye/Secrets-Masker.git
+cd Secrets-Masker
+pip install .
+```
+
+</details>
 
 ---
 
 ## Quick Start
 
 ```python
-from secrets_masker import mask_secrets
+from secretsmasker import mask_secrets
 
 text = """
   aws_key   = AKIAIOSFODNN7EXAMPLE
@@ -190,7 +195,7 @@ Each example below shows the raw input and the masked output produced by `mask_s
 ### AWS Access Key
 
 ```python
-from secrets_masker import mask_secrets
+from secretsmasker import mask_secrets
 
 text = "aws_access_key_id = AKIAIOSFODNN7EXAMPLE"
 print(mask_secrets(text).masked_text)
@@ -519,7 +524,7 @@ DEBUG=false
 
 ```python
 import json
-from secrets_masker import mask_secrets
+from secretsmasker import mask_secrets
 
 log_line = json.dumps({
     "event": "user_login",
@@ -616,7 +621,7 @@ The `findings` list preserves the original detection type and character offsets,
 The single public function. Runs all three detection layers and returns a `MaskResult`.
 
 ```python
-from secrets_masker import mask_secrets, MaskResult
+from secretsmasker import mask_secrets, MaskResult
 
 result: MaskResult = mask_secrets("token = ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij")
 

@@ -1,4 +1,4 @@
-from secrets_masker import mask_secrets
+from secretsmasker import mask_secrets
 
 text = "use my api key [YOUR SECRET] to logon to my server"
 result = mask_secrets(text)

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python demo_masker.py)",
+      "Bash(python -c ':*)",
+      "Bash(python -m build --wheel --no-isolation)",
+      "Bash(python -m build --wheel)",
+      "Bash(python -m build --sdist)",
+      "Bash(python -c \"import zipfile; z=zipfile.ZipFile\\('dist/secrets_masker-1.0.0-py3-none-any.whl'\\); print\\('\\\\n'.join\\(z.namelist\\(\\)\\)\\)\")",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m pytest tests/ -v --tb=short)"
+    ]
+  }
+}

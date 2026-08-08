@@ -7,7 +7,7 @@ Detection methods:
   3. Entropy analysis   — high-Shannon-entropy strings not caught by the above two
 
 Usage:
-    from secrets_masker import mask_secrets
+    from secretsmasker import mask_secrets
 
     result = mask_secrets(text)
     print(result.masked_text)   # text with secrets replaced by [SECRETS]
